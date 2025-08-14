@@ -1,0 +1,523 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Make sure html & body don't overflow horizontally */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  min-width: 768px;
+  overflow-x: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #12141d;
+  color: #ddd;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: rgba(18, 20, 29, 0.85);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(30, 31, 43, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 200, 255, 0.2);
+}
+
+.nav-container {
+  width: 90vw;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ddd;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00c8ff;
+}
+
+.btn-primary {
+  background-color: #00c8ff;
+  color: #12141d;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0099cc;
+}
+
+.cta-btn {
+  white-space: nowrap;
+}
+
+/* Container - Centered and responsive */
+.page-container {
+  width: 90vw;
+  max-width: 1600px;
+  margin: 3rem auto;
+  padding: 0 3rem;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #1e1f2b;
+  padding: 6rem 14rem;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 200, 255, 0.3);
+  width: 100%;
+  min-height: 800px;
+  flex-wrap: wrap;
+}
+
+/* Text */
+.hero-text p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.sub-text {
+  font-size: 1.8rem;
+  color: #999;
+  margin-top: 0.5rem;
+}
+
+/* Typing animation styles */
+.typing-text {
+  white-space: nowrap;
+  display: inline-block;
+  color: #00c8ff;
+}
+
+.cursor {
+  display: inline-block;
+  background-color: #00c8ff;
+  width: 2px;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+  vertical-align: bottom;
+  height: 1.2em;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  color: #00c8ff;
+  background-color: rgba(0, 200, 255, 0.1);
+  border: 1px solid #00c8ff;
+  border-radius: 50%;
+  padding: 0.6rem;
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: #00c8ff;
+  color: #12141d;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* About Me Section */
+.about-content {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.about-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.about-tech-stack h4 {
+  color: #00c8ff;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.about-tech-stack .tag {
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #00c8ff;
+  background-color: rgba(0, 200, 255, 0.1);
+  border: 1px solid #00c8ff;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.about-tech-stack .tag:hover {
+  background-color: #00c8ff;
+  color: #12141d;
+  cursor: default;
+}
+
+/* Sections */
+.projects-section,
+.contact-section {
+  margin-top: 4rem;
+}
+
+.projects-section h2,
+.contact-section h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00c8ff;
+  margin-bottom: 1rem;
+}
+
+/* Projects Section Styles */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: #1e1f2b;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.15);
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+
+.project-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-behavior: smooth;
+  border-radius: 8px;
+}
+
+.project-carousel img {
+  height: 400px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Project Content */
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.project-content h3 {
+  color: #00c8ff;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+/* Anchor tag for Project Title */
+.project-content a {
+  text-decoration: none; /* Remove underline */
+  color: #00c8ff; /* Set title color to blue */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.project-content a:hover {
+  color: #0099cc; /* Change to darker blue on hover */
+}
+
+.project-content p {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* ✅ Project Tags */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #00c8ff;
+  background-color: rgba(0, 200, 255, 0.1);
+  border: 1px solid #00c8ff;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background-color: #00c8ff;
+  color: #12141d;
+  cursor: default;
+}
+
+/* About Me Section */
+.about-section {
+  margin-top: 4rem;
+  padding: 3rem 0;
+}
+
+.about-section h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00c8ff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Keeps the layout of the items aligned to left and right in full screen */
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  max-width: 1600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+  max-width: 600px; /* Limit the width of the text */
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.about-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-content: center; /* Center the tags */
+}
+
+.about-tech-stack h4 {
+  color: #00c8ff;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.about-tech-stack .tag {
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #00c8ff;
+  background-color: rgba(0, 200, 255, 0.1);
+  border: 1px solid #00c8ff;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.about-tech-stack .tag:hover {
+  background-color: #00c8ff;
+  color: #12141d;
+  cursor: default;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 2rem 0;
+  border-top: 1px solid #333;
+  margin-top: 4rem;
+  color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+  .project-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-content h3 {
+    text-align: center;
+  }
+
+  .project-content {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .project-carousel img {
+    height: 250px;
+  }
+  .about-content {
+    flex-direction: column; /* Stack the content vertically on medium screens */
+    align-items: center;
+    gap: 2rem; /* Add some space between text and tech stack */
+  }
+
+  .about-tech-stack {
+    justify-content: center;
+  }
+
+  .about-tech-stack .tag {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+
+  .page-container {
+    padding: 0 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .sub-text {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    max-width: 400px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .project-carousel img {
+    height: 250px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+  .about-content {
+    flex-direction: column; /* Stack the content vertically on smaller screens */
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text p {
+    font-size: 1rem; /* Adjust font size for better readability on smaller screens */
+  }
+
+  .about-tech-stack {
+    justify-content: center;
+  }
+}
