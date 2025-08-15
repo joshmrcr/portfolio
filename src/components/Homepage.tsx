@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import "./Homepage.css";
 import portraitImg from "../assets/portrait.png";
-import welcomeImg from "../assets/welcome.jpg";
 import homeImg from "../assets/home.jpg";
-import pomodoroImg from "../assets/pomodoro.jpg";
+import bsunavImg from "../assets/bsunav.png";
+import empForm from "../assets/emp_form.png";
 
 // Font Awesome Imports
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
@@ -63,6 +64,19 @@ function TypingText() {
 
 export default function Homepage() {
   const [scrolled, setScrolled] = useState(false);
+  // Modal state & handlers
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+
+  const openModal = (imgSrc: string) => {
+    setModalImage(imgSrc);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalImage("");
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -93,9 +107,8 @@ export default function Homepage() {
             </li>
           </ul>
           <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/BrianJoshuaMarcera_ComputerEngineer.pdf"
+            download="Brian_Joshua_Marcera_Resume.pdf"
             className="btn-primary cta-btn"
           >
             Download Resume
@@ -164,27 +177,32 @@ export default function Homepage() {
 
         <section className="projects-section" id="projects">
           <h2 className="section-title">Projects</h2>
+
           <div className="projects">
             <div className="project-card">
-              <div className="project-carousel">
-                <img src={welcomeImg} alt="Welcome Screen" />
-                <img src={homeImg} alt="Home Screen" />
-                <img src={pomodoroImg} alt="Pomodoro Timer Screen" />
+              <div className="project-image">
+                <img
+                  src={homeImg}
+                  alt="Task Pomodoro Screenshot"
+                  onClick={() => openModal(homeImg)}
+                  style={{ cursor: "pointer" }}
+                />
               </div>
+
               <div className="project-content">
-                {/* Only the "Task Pomodoro" title is clickable */}
                 <a
                   href="https://github.com/joshmrcr/Task_Pomodoro"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <h3>Task Pomodoro</h3>
+                  <h3 className="project-title">Task Pomodoro</h3>
                 </a>
-                <p>
+                <p className="project-description">
                   Task Pomodoro is a minimalist productivity app built with
                   React Native and Expo to help users manage tasks (daily &
                   weekly) while staying focused using the Pomodoro technique.
                 </p>
+
                 <div className="project-tags">
                   <span className="tag">TypeScript</span>
                   <span className="tag">React Native</span>
@@ -195,7 +213,69 @@ export default function Homepage() {
               </div>
             </div>
 
-            {/* You can add other projects here */}
+            <div className="project-card">
+              <div className="project-image">
+                <img
+                  src={empForm}
+                  alt="Employee Data Entry Form"
+                  onClick={() => openModal(empForm)}
+                  style={{ cursor: "pointer" }}
+                />
+              </div>
+              <div className="project-content">
+                <a
+                  href="https://github.com/joshmrcr/EmployeeDataEntry"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <h3 className="project-title">
+                    SCC Employee Management System
+                  </h3>
+                </a>
+                <p className="project-description">
+                  A web-based employee data management system built with Google
+                  Apps Script and HTML/CSS. This system allows HR to easily add,
+                  update, and manage employee details, including photo uploads
+                  and government ID tracking.
+                </p>
+                <div className="project-tags">
+                  <span className="tag">Google Apps Script</span>
+                  <span className="tag">HTML</span>
+                  <span className="tag">CSS</span>
+                  <span className="tag">JavaScript</span>
+                  <span className="tag">Google Sheets</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-image">
+                <img
+                  src={bsunavImg}
+                  alt="BSU NAV Screenshot"
+                  onClick={() => openModal(bsunavImg)}
+                  style={{ cursor: "pointer" }}
+                />
+              </div>
+              <div className="project-content">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <h3 className="project-title">BSU NAV</h3>
+                </a>
+                <p className="project-description">
+                  BSU NAV is a 360-degree panoramic navigation app designed
+                  specifically for Batangas State University Alangilan Campus.
+                  It offers immersive navigation features such as panoramic
+                  views, animated path visualization, interactive directory
+                  board, and intuitive navigational buttons.
+                </p>
+                <div className="project-tags">
+                  <span className="tag">UI Design</span>
+                  <span className="tag">UX Design</span>
+                  <span className="tag">Virtual Reality</span>
+                  <span className="tag">3D VISTA</span>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -251,8 +331,65 @@ export default function Homepage() {
         </section>
 
         <footer className="footer">
-          © 2025 Brian Joshua Marcera. All rights reserved.
+          <div className="footer-container">
+            <div className="footer-contacts">
+              <div className="contact-item">
+                <FontAwesomeIcon icon={faPhone} className="footer-icon" />
+                <span>0970 495 8740</span>
+              </div>
+              <div className="contact-item">
+                <FontAwesomeIcon icon={faEnvelope} className="footer-icon" />
+                <a href="mailto:cpebrianmarcera@gmail.com">
+                  cpebrianmarcera@gmail.com
+                </a>
+              </div>
+              <div className="contact-item">
+                <FontAwesomeIcon icon={faLinkedin} className="footer-icon" />
+                <a
+                  href="https://linkedin.com/in/brian-joshua-marcera"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  linkedin.com/in/brian-joshua-marcera
+                </a>
+              </div>
+              <div className="contact-item">
+                <FontAwesomeIcon icon={faGithub} className="footer-icon" />
+                <a
+                  href="https://github.com/joshmrcr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  github.com/joshmrcr
+                </a>
+              </div>
+              <div className="contact-item">
+                <FontAwesomeIcon icon={faBehance} className="footer-icon" />
+                <a
+                  href="https://behance.net/joshmrcr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  behance.net/joshmrcr
+                </a>
+              </div>
+            </div>
+            <div className="footer-bottom">
+              © 2025 Brian Joshua Marcera. All rights reserved.
+            </div>
+          </div>
         </footer>
+
+        {modalOpen && (
+          <div className="modal-overlay" onClick={closeModal}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <img src={modalImage} alt="Modal" />
+              <button className="modal-close" onClick={closeModal}>
+                ×
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
