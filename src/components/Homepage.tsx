@@ -4,6 +4,7 @@ import portraitImg from "../assets/portrait.png";
 import homeImg from "../assets/home.jpg";
 import bsunavImg from "../assets/bsunav.png";
 import empForm from "../assets/emp_form.png";
+import flatafrica from "../assets/flatafrica.png";
 
 // Font Awesome Imports
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -273,6 +274,35 @@ export default function Homepage() {
                   <span className="tag">UX Design</span>
                   <span className="tag">Virtual Reality</span>
                   <span className="tag">3D VISTA</span>
+                </div>
+              </div>
+            </div>
+            <div className="project-card">
+              <div className="project-image">
+                <img
+                  src={flatafrica}
+                  alt="Flatafrica Hub Screenshot"
+                  onClick={() => openModal(flatafrica)}
+                  style={{ cursor: "pointer" }}
+                />
+              </div>
+              <div className="project-content">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <h3 className="project-title">Flat Africa hub</h3>
+                </a>
+                <p className="project-description">
+                  FlatAfrica Hub is a service-focused website designed to
+                  showcase the company’s sourcing, inspection, and shipping
+                  solutions for businesses across Africa. Built using the Wix
+                  Website Editor, it highlights the brand’s services through a
+                  clean layout, intuitive navigation, and user-centered UX/UI
+                  design. The site enables clients to easily explore offerings,
+                  request quotes, and connect with the business.
+                </p>
+                <div className="project-tags">
+                  <span className="tag">Wix Development</span>
+                  <span className="tag">UX Design</span>
+                  <span className="tag">UI Design</span>
                 </div>
               </div>
             </div>

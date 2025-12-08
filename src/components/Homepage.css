@@ -245,7 +245,7 @@ body {
   width: 100%;
   max-width: 1600px;
   margin: 4rem auto 0;
-  padding: 0 4rem; /* same horizontal padding as hero-content */
+  padding: 0 2rem; /* same horizontal padding as hero-content */
   box-sizing: border-box;
 }
 .contact-section {
@@ -263,8 +263,8 @@ body {
 /* Projects Section Styles */
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
   justify-content: center;
   max-width: 100%;
 }
@@ -273,8 +273,8 @@ body {
   border-radius: 12px;
   overflow: hidden;
   padding: 20px;
-  max-width: 450px;
-  margin: 0 auto;
+  /*max-width: 450px;
+  margin: 0 auto;*/
   box-shadow: 0 4px 12px rgba(0, 200, 255, 0.3);
   transition: transform 0.3s ease;
 }
@@ -638,5 +638,11 @@ body {
     width: 100%;
     max-width: 300px;
     height: auto;
+  }
+}
+
+@media (min-width: 800px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr); /* 2×2 on desktop */
   }
 }
