@@ -11,7 +11,7 @@ const Hero = () => {
                     Dedicated to building efficient, user-focused applications. My expertise spans from front-end development to system design, with a strong focus on creating scalable solutions that enhance workflows and improve user experience.
                 </p>
                 <div className="hero-cta reveal">
-                    <a href="https://joshmrcr.github.io/portfolio/BrianJoshuaMarcera_ComputerEngineer.pdf" target="_blank" rel="noreferrer" className="btn btn-primary glow-box">Download CV</a>
+                    <a href="/BrianJoshuaMarcera_ComputerEngineer.pdf" target="_blank" rel="noreferrer" className="btn btn-primary glow-box">Download Resume</a>
                     <a href="#projects" className="btn btn-outline">Check out my work!</a>
                 </div>
             </div>
