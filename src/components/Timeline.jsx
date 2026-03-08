@@ -3,20 +3,15 @@ import './Timeline.css';
 const Timeline = () => {
     const experiences = [
         {
-            category: "Education",
-            title: "Batangas State University",
-            role: "Computer Engineering Graduate",
-            description: "Completed comprehensive coursework focusing on full-stack web development, systems programming, hardware/software integration, and software engineering principles.",
-            icon: "graduation-cap"
+            year: "August 2025 - Present",
+            category: "Freelance",
+            title: "Independent Developer",
+            role: "Software Designer & Developer",
+            description: "Building responsive web applications, designing user interfaces, and delivering custom software solutions to diverse clients.",
+            icon: "monitor"
         },
         {
-            category: "On-The-Job Experience",
-            title: "UI Designer & Front-end Developer Intern",
-            role: "Internship",
-            description: "Engineered an employee information management system and improved website performance through optimized React components and UI/UX best practices.",
-            icon: "briefcase"
-        },
-        {
+            year: "March 2025 - August 2025",
             category: "Job Experience",
             title: "Data Entry & System Developer",
             role: "Professional Role",
@@ -24,16 +19,35 @@ const Timeline = () => {
             icon: "database"
         },
         {
+            year: "February 2023 - April 2023",
+            category: "On-The-Job Experience",
+            title: "UI Designer & Front-end Developer Intern",
+            role: "Internship",
+            description: "Engineered an employee information management system and improved website performance through optimized React components and UI/UX best practices.",
+            icon: "briefcase"
+        },
+        {
+            year: "2021",
             category: "Certificates",
             title: "Continuous Learning",
             role: "Certifications",
             description: "Obtained certifications in 'Introduction to JAVA' and 'Full Stack: Web Development Guide For an Absolute Beginner'.",
             icon: "award"
+        },
+        {
+            year: "August 2019 - August 2024",
+            category: "Education",
+            title: "Batangas State University",
+            role: "Computer Engineering Graduate",
+            description: "Completed comprehensive coursework focusing on full-stack web development, systems programming, hardware/software integration, and software engineering principles.",
+            icon: "graduation-cap"
         }
     ];
 
     const getIcon = (type) => {
         switch (type) {
+            case 'monitor':
+                return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>;
             case 'graduation-cap':
                 return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>;
             case 'briefcase':
@@ -60,6 +74,7 @@ const Timeline = () => {
                             {getIcon(exp.icon)}
                         </div>
                         <div className="timeline-content glass">
+                            <span className="timeline-year">{exp.year}</span>
                             <span className="timeline-category">{exp.category}</span>
                             <h3 className="timeline-title">{exp.title}</h3>
                             <h4 className="timeline-role glow-text">{exp.role}</h4>
