@@ -8,5 +8,5 @@ export default defineConfig({
   // Assuming the user's repository will be named `portfolio`.
   // If deploying to a user/org page (username.github.io), this should be base: '/'.
   // We'll leave it as default '/' to cover the standard usage, but typically it would be `base: '/portfolio/'`.
-  base: './',
+  base: '/portfolio/',
 })
