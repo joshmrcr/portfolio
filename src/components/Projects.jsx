@@ -6,12 +6,12 @@ const Projects = () => {
             title: "Task Pomodoro",
             description: "A productivity app combining task management with a Pomodoro timer. Helps users stay focused and track their tasks efficiently.",
             techStack: ["React Native", "Expo"],
-            github: "#",
-            demo: "https://github.com/joshmrcr/Task_Pomodoro"
+            github: "https://github.com/joshmrcr/Task_Pomodoro",
+            demo: ""
         },
         {
             title: "BSU NAV",
-            description: "A 360-degree panoramic navigation app designed specifically for Batangas State University Alangilan Campus. It offers immersive navigation features such as panoramic views, animated path visualization, interactive directory board, and intuitive navigational buttons.",
+            description: "A 360-degree panoramic navigation app designed specifically for Batangas State University Alangilan Campus. It offers immersive navigation features such as panoramic views, animated path visualization, an interactive directory board, and intuitive navigation buttons.",
             techStack: ["UI Design", "UX Design", "Virtual Reality", "3D VISTA"],
             github: "#",
             demo: "#"

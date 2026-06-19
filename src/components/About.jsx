@@ -14,10 +14,10 @@ const About = () => {
             <div className="about-content">
                 <div className="about-text reveal">
                     <p>
-                        I'm Brian Joshua Marcera, a Computer Engineering graduate and passionate Software Engineer dedicated to building efficient, user-focused applications. My expertise spans from front-end development to system design, with a strong focus on creating scalable solutions that enhance workflows and improve user experience.
+                        I'm Brian Joshua Marcera, a Computer Engineering graduate and passionate Software Engineer dedicated to building efficient, user-focused applications. My expertise spans from front-end development to system design, with a strong focus on creating scalable solutions that enhance workflows and improve user experiences.
                     </p>
                     <p>
-                        I have professional experience as a UI Designer and Front-End Developer intern, where I successfully engineered an employee information management system and improved website performance through optimized React components.
+                        I have professional experience as a UI/UX Designer and Front-End Developer Intern, where I successfully engineered an employee information management system and improved website performance through optimized React components.
                     </p>
                     <p>
                         Beyond technical skills, I am a lifelong learner who enjoys exploring emerging technologies and applying problem-solving skills to real-world challenges. Whether it's developing mobile apps, web platforms, or complex systems, I strive for excellence in every line of code I write.

@@ -8,7 +8,7 @@ const Hero = () => {
                 <h1 className="hero-name reveal">Brian Joshua Marcera.</h1>
                 <h2 className="hero-title reveal glow-text">Computer Engineer and Software Engineer.</h2>
                 <p className="hero-description reveal">
-                    Dedicated to building efficient, user-focused applications. My expertise spans from front-end development to system design, with a strong focus on creating scalable solutions that enhance workflows and improve user experience.
+                    Dedicated to building efficient, user-focused applications. My expertise spans from front-end development to system design, with a strong focus on creating scalable solutions that enhance workflows and improve user experiences.
                 </p>
                 <div className="hero-cta reveal">
                     <a href={`${import.meta.env.BASE_URL}BrianJoshuaMarcera_ComputerEngineer.pdf`} target="_blank" rel="noreferrer" className="btn btn-primary glow-box">Download Resume</a>

@@ -5,7 +5,7 @@ const Timeline = () => {
         {
             year: "May 2026 - Present",
             category: "Job Experience",
-            title: "Software Engineer – AI Trainer / AI Coding Evaluator (part-time)",
+            title: "Software Engineer – AI Trainer / AI Coding Evaluator (Part-time)",
             role: "AI Model Training & Code Evaluation",
             description: "Training and evaluating AI models to understand and generate human-like text, images, and other forms of content.",
             icon: "monitor"
@@ -22,14 +22,14 @@ const Timeline = () => {
             year: "March 2025 - August 2025",
             category: "Job Experience",
             title: "Data Entry & System Developer",
-            role: "Professional Role",
+            role: "System Development & Data Management",
             description: "Managed data integrity and developed internal system optimizations to improve workflow efficiency and system reliability.",
             icon: "database"
         },
         {
             year: "February 2023 - April 2023",
             category: "On-The-Job Experience",
-            title: "UI Designer & Front-end Developer Intern",
+            title: "UI/UX Designer & Front-End Developer Intern",
             role: "Internship",
             description: "Engineered an employee information management system and improved website performance through optimized React components and UI/UX best practices.",
             icon: "briefcase"
@@ -39,7 +39,7 @@ const Timeline = () => {
             category: "Certificates",
             title: "Continuous Learning",
             role: "Certifications",
-            description: "Obtained certifications in 'Introduction to JAVA' and 'Full Stack: Web Development Guide For an Absolute Beginner'.",
+            description: "Obtained certifications in 'Introduction to Java' and 'Full Stack: Web Development Guide For an Absolute Beginner'.",
             icon: "award"
         },
         {
