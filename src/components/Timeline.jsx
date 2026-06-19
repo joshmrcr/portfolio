@@ -3,6 +3,14 @@ import './Timeline.css';
 const Timeline = () => {
     const experiences = [
         {
+            year: "May 2026 - Present",
+            category: "Job Experience",
+            title: "Software Engineer – AI Trainer / AI Coding Evaluator (part-time)",
+            role: "AI Model Training & Code Evaluation",
+            description: "Training and evaluating AI models to understand and generate human-like text, images, and other forms of content.",
+            icon: "monitor"
+        },
+        {
             year: "August 2025 - Present",
             category: "Freelance",
             title: "Independent Developer",
